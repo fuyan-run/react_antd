@@ -112,6 +112,7 @@ module.exports = {
         })
     ],
     externals: {
+        // antd: 'antd'
     },
     optimization: {
         splitChunks: {
