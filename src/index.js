@@ -1,16 +1,16 @@
 import ReactDom from 'react-dom';
 import { ConfigProvider } from 'antd';
-import { Init } from "./Init";
+import App from "./App";
 import zhCN from 'antd/es/locale/zh_CN';
 import 'antd/dist/antd.css';
 import './index.less';
-class App extends React.Component {
+class Index extends React.Component {
     render(){
         return (
             <ConfigProvider locale={zhCN}>
-                <Init />
+                <App />
             </ConfigProvider>
         )
     }
 }
-ReactDom.render(<App />, document.getElementById("app"))
+ReactDom.render(<Index />, document.getElementById("app"))
