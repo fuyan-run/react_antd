@@ -1,17 +1,18 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import routers from './routers';
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-dom";
+// import routers from './routers';
 
 
 export default function RouteConfigExample() {
   return (
-    <Router>
-        <Link to="/Bus">/Bus</Link>
+    <div>
+    {/* <Router> */}
+        {/* <Link to="/Bus">/Bus</Link>
         <Switch>
             {
                 routers.map((route, i) => {
@@ -42,7 +43,8 @@ export default function RouteConfigExample() {
                     )
                 }
             )}
-        </Switch>
-    </Router>
+        </Switch> */}
+    {/* </Router> */}
+    </div>
   );
 }

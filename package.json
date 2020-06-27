@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-test": "webpack --mode=development --config ./build/build.js --progress",
-    "build-prod": "webpack --mode=production --config ./build/build.js --progress",
-    "start": "webpack-dev-server --config ./build/dev.js --progress --inline --hot"
+    "build-test": "webpack --mode=development --config ./build/build-test.js --progress",
+    "build-uat": "webpack --mode=development --config ./build/build-uat.js --progress",
+    "build-prod": "webpack --mode=production --config ./build/build-prod.js --progress",
+    "start": "webpack-dev-server --config ./build/start.js --progress --inline --hot"
   },
   "keywords": [],
   "author": "",
@@ -40,7 +40,6 @@
     "jquery": "^3.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
     "webpack-merge": "^4.2.2"
   }
 }

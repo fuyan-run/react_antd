@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const FriendlyErrors = require('friendly-errors-webpack-plugin');
 const base = require('./base.js');
+const conf = require('./config/index.js');
 const path = require('path');
 
 const pathResolve = src => {
@@ -13,8 +14,8 @@ module.exports = merge(base, {
         port: 9000,
         hot: true,
         compress: true,
-        contentBase: pathResolve('dist'),
         stats: "errors-only",
+        contentBase: pathResolve('dist'),
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -25,5 +26,8 @@ module.exports = merge(base, {
                 ]
             }
         }),
+        new webpack.DefinePlugin({
+            "CONFIG": JSON.stringify(conf.dev),
+        })
     ]
 })

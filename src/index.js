@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDom from 'react-dom';
 import { ConfigProvider } from 'antd';
 import App from "./App";
@@ -5,7 +6,8 @@ import zhCN from 'antd/es/locale/zh_CN';
 import 'antd/dist/antd.css';
 import './index.less';
 class Index extends React.Component {
-    render(){
+    render () {
+        console.log('CONFIG', CONFIG);
         return (
             <ConfigProvider locale={zhCN}>
                 <App />
