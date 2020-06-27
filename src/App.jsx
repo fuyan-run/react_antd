@@ -1,17 +1,17 @@
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-dom";
-// import routers from './routers';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import routers from './routers';
 
 
 export default function RouteConfigExample() {
   return (
-    <div>
-    {/* <Router> */}
+    <Router>
+        todo: router
         {/* <Link to="/Bus">/Bus</Link>
         <Switch>
             {
@@ -44,7 +44,6 @@ export default function RouteConfigExample() {
                 }
             )}
         </Switch> */}
-    {/* </Router> */}
-    </div>
+    </Router>
   );
 }

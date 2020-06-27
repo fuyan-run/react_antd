@@ -7,7 +7,7 @@ import 'antd/dist/antd.css';
 import './index.less';
 class Index extends React.Component {
     render () {
-        console.log('CONFIG', CONFIG);
+        console.log('全局环境的参数 <CONFIG>', CONFIG);
         return (
             <ConfigProvider locale={zhCN}>
                 <App />
