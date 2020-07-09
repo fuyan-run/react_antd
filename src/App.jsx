@@ -1,49 +1,43 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    browserHistory,
+    hashHistory,
+    Link
 } from "react-router-dom";
 import routers from './routers';
 
 
 export default function RouteConfigExample() {
-  return (
-    <Router>
-        todo: router
-        {/* <Link to="/Bus">/Bus</Link>
-        <Switch>
-            {
-                routers.map((route, i) => {
-                    return (
-                        <React.Fragment>
-                            {                    
-                                (function () {
-                                    const children = route.routes;
-                                    const str = '';
-                                    str += <Route
-                                        path={route.path}
-                                        render={props => (
-                                            <route.component {...props} routes={route.routes} />
-                                        )}
-                                    />
-                                    if (children) {
-                                        str += <Route
-                                            path={children.path}
-                                            render={props => (
-                                                <route.component {...props} routes={children} />
-                                            )}
-                                        />
-                                    }
-                                    return str;
-                                })
-                            }
-                        </React.Fragment>
-                    )
+    return (
+        <Router history={hashHistory}>
+            <Link to="/Bus">Bus</Link><br />
+            <Link to="/Cart">Cart</Link><br />
+            <Link to="/Cart/Bus">/Cart/Bus</Link><br />
+            <Link to="/home/Cart/Bus">/home/Cart/Bus</Link><br />
+            <Link to="/Dss/Bus">/Dss/Bus</Link><br />
+            <Switch>
+                {/* <Route path="/home/Cart/Bus" component={<span>asdasdasd</span>} /> */}
+                {
+                    routers.map(route => {
+                        const arr = [];
+                        Array.isArray(route.routes) && route.routes.map(item => {
+                            arr.push(<Route {...item} />); 
+                        });
+                        console.log(arr);
+                        return (
+                            <>
+                                { arr }
+                                <Route
+                                    {...route}
+                                />
+                            </>
+                        )
+                    })
                 }
-            )}
-        </Switch> */}
-    </Router>
-  );
+            </Switch>
+        </Router>
+    );
 }
