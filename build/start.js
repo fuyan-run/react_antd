@@ -8,7 +8,6 @@ const path = require('path');
 const pathResolve = src => {
     return path.resolve(__dirname, src)
 }
-console.log('pathResolve(dist)', pathResolve('dist'));
 module.exports = merge(base, {
     mode: 'development',
     devServer: {
