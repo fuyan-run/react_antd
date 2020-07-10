@@ -1,4 +1,7 @@
-const conf = {}
+const conf = {
+    port: 9002,
+    publicPath: '/'
+}
 
 const base = {
     tobe: '@@@'

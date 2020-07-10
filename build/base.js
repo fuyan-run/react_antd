@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const CONF = require('./config/index.js');
 
 const pathResolve = src => {
     return path.resolve(__dirname, src)
@@ -15,14 +16,15 @@ module.exports = {
         pathResolve('../src/index.js')
     ],
     output: {
-        publicPath: '',
+        publicPath: CONF.publicPath,
         filename: './js/[name].[hash].js',
         chunkFilename: './js/[name].[hash].js'
     },
     resolve: {  
         extensions: ['.js','.jsx'],
         alias: {
-
+            '@': pathResolve('../src'),
+            'view': pathResolve('../src/view')
         }
     },
     module: {
@@ -110,9 +112,9 @@ module.exports = {
             React: 'react',
         })
     ],
-    externals: {
-        // antd: 'antd'
-    },
+    // externals: {
+    //     antd: 'antd'
+    // },
     optimization: {
         splitChunks: {
             chunks: 'all',
