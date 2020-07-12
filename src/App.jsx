@@ -7,6 +7,7 @@ import {
     Link
 } from "react-router-dom";
 import routers from './routers';
+import { connect } from 'dva';
 
 class App extends React.Component {
     render () {
@@ -19,6 +20,7 @@ class App extends React.Component {
         });
         return (
             <Router>
+                {/* { JSON.stringify(products) } */}
                 <Link to="/Bus">Bus</Link><br />
                 <Link to="/Cart">Cart</Link><br />
                 <Link to="/Cart/Bus">/Cart/Bus</Link><br />
@@ -31,5 +33,7 @@ class App extends React.Component {
         );
     }
 }
-
 export default App;
+// export default connect(({ products }) => ({
+//     products,
+// }))(App);
