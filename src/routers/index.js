@@ -20,7 +20,7 @@ const Cart2 = () => {
 export default [
     {
         key: 'Home',
-        path: "/Home",
+        path: "/",
         exact: true,
         component: Home
     },
