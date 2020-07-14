@@ -7,7 +7,6 @@ import {
     Link
 } from "react-router-dom";
 import routers from './routers';
-import { connect } from 'dva';
 
 class App extends React.Component {
     render () {
@@ -34,6 +33,3 @@ class App extends React.Component {
     }
 }
 export default App;
-// export default connect(({ products }) => ({
-//     products,
-// }))(App);
