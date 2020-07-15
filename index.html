@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!-- 引用顺序很重要
+        react-> react-dom ->
+        moment -> moment/locale/zh-cn ->
+        antd -> antd-with-locales ->
+        polyfill? ->
+        antd.min.css
+    -->
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/locale/zh-cn.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/4.4.2/antd.min.js"></script>
+    <script src="https://lib.baomitu.com/antd/4.4.2/antd-with-locales.min.js"></script>
+    
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/babel-polyfill/7.10.4/polyfill.min.js"></script> -->
+    
+    <link rel="stylesheet" href="https://lib.baomitu.com/antd/4.4.2/antd.min.css">
+    
+    
 </head>
 <body>
     <div id="app"></div>

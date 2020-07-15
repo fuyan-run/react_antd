@@ -27,6 +27,11 @@ module.exports = {
             'view': pathResolve('../src/view')
         }
     },
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM',
+        'antd': 'antd'
+    },
     module: {
         rules: [
             {
