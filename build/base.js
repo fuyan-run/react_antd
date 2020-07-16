@@ -111,7 +111,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'webpack 4.43.0',
-            template: './index.html'
+            template: pathResolve('./tepHtml/dev.html')
         }),
         new webpack.ProvidePlugin({
             React: 'react',

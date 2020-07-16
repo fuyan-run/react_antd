@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!-- 引用顺序很重要
+        react-> react-dom ->
+        moment -> moment/locale/zh-cn? ->
+        antd -> antd-with-locales? ->
+        polyfill? ->
+        antd.min.css
+    -->
+
+    <script src="//static.mobilemd.cn/public/lib/react/16.10.0/react.development.js"></script>
+    <script src="//static.mobilemd.cn/public/lib/react-dom/16.13.0/react-dom.development.js"></script>
+
+    <script src="//static.mobilemd.cn/public/lib/moment/2.24.0/moment.min.js"></script>
+
+    <script src="//static.mobilemd.cn/public/lib/antd/4.0.4/antd.js"></script>
+    
+    <link rel="stylesheet" href="//static.mobilemd.cn/public/lib/antd/4.0.4/antd.css">
+    
+    
+</head>
+<body>
+    <div id="app"></div>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts-en.common.js"></script> -->
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+</body>
+</html>
