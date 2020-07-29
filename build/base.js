@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 const CONF = require('./config/index.js');
 
@@ -109,6 +110,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: './css/[name].[chunkhash:6].css',
             chunkFilename: './common/[name].[chunkhash:6].css',
+        }),
+        new OptimizeCssAssetsPlugin({
+            cssProcessorOptions: {
+                safe: true
+            }
         }),
         new HtmlWebpackPlugin({
             title: 'webpack 4.43.0',
