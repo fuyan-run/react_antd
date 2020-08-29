@@ -25,7 +25,8 @@ module.exports = {
         extensions: ['.js','.jsx'],
         alias: {
             '@': pathResolve('../src'),
-            'view': pathResolve('../src/view')
+            'view': pathResolve('../src/view'),
+            'fetch': pathResolve('../src/fetch'),
         }
     },
     externals: {
